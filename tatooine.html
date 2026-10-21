@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tatooine</title>
+    <meta name="description" content="Tatooine - a-sky">
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="texturaAlaX" src="assets/alax.png">
+        <img id="tatooine" src="assets/tatooine360.jpg">
+      </a-assets>
+
+      <!-- fondo 360 (desierto con los dos soles) -->
+      <a-sky id="image-360" radius="30" src="#tatooine" rotation="0 -90 0"></a-sky>
+
+      <a-text value="TATOOINE" font="exo2bold" color="#ffe81f" align="center" position="0 3.4 -6" scale="3.5 3.5 3.5"
+              animation="property: position; dir: alternate; dur: 3000; loop: true; easing: easeInOutSine; to: 0 3.6 -6"></a-text>
+
+      <!-- ala-x dando vueltas -->
+      <a-entity animation="property: rotation; to: 0 360 0; dur: 18000; loop: true; easing: linear">
+        <a-entity position="0 4 -10" rotation="0 90 -10">
+          <!-- cuerpo y morro -->
+          <a-box width="0.3" height="0.3" depth="2.2" src="#texturaAlaX"></a-box>
+          <a-cone position="0 0 -1.5" rotation="-90 0 0" radius-bottom="0.15" radius-top="0.03" height="0.8" src="#texturaAlaX"></a-cone>
+          <a-box position="0 0.18 -0.4" width="0.22" height="0.12" depth="0.5" color="#333a44"></a-box>
+
+          <a-entity position="0 0 0.6">
+            <!-- alas en X -->
+            <a-entity rotation="0 0 15">
+              <a-box width="2.6" height="0.04" depth="0.6" src="#texturaAlaX"></a-box>
+              <a-box position="1.15 0 0" width="0.3" height="0.05" depth="0.62" color="#c62828"></a-box>
+              <a-box position="-1.15 0 0" width="0.3" height="0.05" depth="0.62" color="#c62828"></a-box>
+            </a-entity>
+            <a-entity rotation="0 0 -15">
+              <a-box width="2.6" height="0.04" depth="0.6" src="#texturaAlaX"></a-box>
+              <a-box position="1.15 0 0" width="0.3" height="0.05" depth="0.62" color="#c62828"></a-box>
+              <a-box position="-1.15 0 0" width="0.3" height="0.05" depth="0.62" color="#c62828"></a-box>
+            </a-entity>
+            <!-- motores -->
+            <a-cylinder position="0.35 0.2 0" rotation="90 0 0" radius="0.09" height="0.8" src="#texturaAlaX"></a-cylinder>
+            <a-cylinder position="-0.35 0.2 0" rotation="90 0 0" radius="0.09" height="0.8" src="#texturaAlaX"></a-cylinder>
+            <a-cylinder position="0.35 -0.2 0" rotation="90 0 0" radius="0.09" height="0.8" src="#texturaAlaX"></a-cylinder>
+            <a-cylinder position="-0.35 -0.2 0" rotation="90 0 0" radius="0.09" height="0.8" src="#texturaAlaX"></a-cylinder>
+            <a-circle position="0 0 0.42" radius="0.5" material="shader: flat; color: #ff7a2a; opacity: 0.5; transparent: true"></a-circle>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+
+      <a-camera>
+        <a-cursor color="#ffe81f"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
