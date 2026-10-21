@@ -4,11 +4,11 @@
 
 Práctica de panorámicas 360º con A-Frame. Son dos escenas de realidad virtual metidas con iframes en `index.html`: una con imagen fija (`a-sky`) y otra con vídeo (`a-videosphere`). He seguido el [tutorial de panorámicas 360º](https://gitlab.com/webxr/tutorial_a-frame_360/wikis/home), pero le he puesto temática de Star Wars.
 
-## Episodio I: Tatooine (tatooine.html)
+## Episodio I: Tatooine (recursos/tatooine.html)
 
 El fondo es una foto 360º de un desierto a la que le añadí el segundo sol y dos lunas para que pareciera Tatooine. Por el cielo da vueltas un Ala-X hecho con primitivas (cajas, cono y cilindros) y con una textura de chapa.
 
-## Episodio II: La Estrella de la Muerte (video.html)
+## Episodio II: La Estrella de la Muerte (recursos/video.html)
 
 El fondo es un vídeo 360º de un vuelo por dentro de un fractal (la esponja de Menger). Lo pasé a gris metálico y así parecen los pasillos de la Estrella de la Muerte. Delante de la cámara va un caza TIE, orientado hacia donde avanza el vídeo, así que da la sensación de ir volando detrás de él. Lleva la misma textura de chapa que el Ala-X y otra para las alas. También hay dos luces rojas que parpadean y un botón de PLAY/PAUSA, porque en algunos navegadores el vídeo no arranca solo.
 
@@ -24,14 +24,15 @@ En vez de la versión 0.6.1 del tutorial uso A-Frame 1.8.0. Por eso las animacio
 ## Archivos
 
 ```
-index.html          página principal
-tatooine.html       escena con a-sky
-video.html          escena con a-videosphere
-assets/
-  tatooine360.jpg   imagen 360 (4096x2048)
-  deathstar360.mp4  vídeo 360 (1920x960, 35 s)
-  alax.png          textura de chapa
-  tie.png           textura de las alas del TIE
+index.html              página principal con las dos escenas
+recursos/
+  tatooine.html         escena con a-sky
+  video.html            escena con a-videosphere
+  assets/
+    tatooine360.jpg     imagen 360 (4096x2048)
+    deathstar360.mp4    vídeo 360 (1920x960, 35 s)
+    alax.png            textura de chapa
+    tie.png             textura de las alas del TIE
 ```
 
 ## Uso de IA
